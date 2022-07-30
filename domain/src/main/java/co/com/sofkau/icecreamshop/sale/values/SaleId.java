@@ -1,4 +1,6 @@
 package co.com.sofkau.icecreamshop.sale.values;
 
-public class SaleId {
+import co.com.sofka.domain.generic.Identity;
+
+public class SaleId extends Identity {
 }

@@ -1,4 +1,6 @@
 package co.com.sofkau.icecreamshop.sale.commands;
 
-public class AddProduct {
+import co.com.sofka.domain.generic.Command;
+
+public class AddProduct extends Command {
 }
