@@ -35,11 +35,10 @@ public class Sale extends AggregateEvent<SaleId>{
     }
 
     //Commands
-    public void addProduct(ProductId productId, Name name, Amount amount) {
+    public void addProduct(ProductId productId, Name name) {
         Objects.requireNonNull(productId);
         Objects.requireNonNull(name);
-        Objects.requireNonNull(amount);
-        appendChange(new ProductAdded(productId, name, amount)).apply();
+        appendChange(new ProductAdded(productId, name)).apply();
     }
 
     public void removeProduct(ProductId productId) {

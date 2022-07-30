@@ -8,10 +8,8 @@ import co.com.sofkau.icecreamshop.sale.values.ProductId;
 public class ProductAdded extends DomainEvent {
     private final ProductId productId;
     private final Name name;
-    private final Amount amount;
-    public ProductAdded(ProductId productId, Name name, Amount amount) {
+    public ProductAdded(ProductId productId, Name name) {
         super("sofka.sale.productadded");
-        this.amount = amount;
         this.productId = productId;
         this.name = name;
     }
@@ -25,7 +23,4 @@ public class ProductAdded extends DomainEvent {
         return name;
     }
 
-    public Amount getAmount() {
-        return amount;
-    }
 }
