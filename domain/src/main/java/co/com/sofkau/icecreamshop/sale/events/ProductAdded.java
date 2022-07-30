@@ -1,7 +1,6 @@
 package co.com.sofkau.icecreamshop.sale.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofkau.icecreamshop.sale.values.Amount;
 import co.com.sofkau.icecreamshop.sale.values.Name;
 import co.com.sofkau.icecreamshop.sale.values.ProductId;
 

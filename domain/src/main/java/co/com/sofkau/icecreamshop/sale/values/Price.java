@@ -2,8 +2,18 @@ package co.com.sofkau.icecreamshop.sale.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-public class Price implements ValueObject<String> {
-    public String value() {
-        return null;
+import java.math.BigDecimal;
+import java.util.Objects;
+
+public class Price implements ValueObject<BigDecimal> {
+    private final BigDecimal value;
+
+    public Price(BigDecimal value) {
+        this.value = Objects.requireNonNull(value);
+    }
+
+    @Override
+    public BigDecimal value() {
+        return this.value;
     }
 }
