@@ -9,6 +9,9 @@ public class PhoneNumber implements ValueObject<String> {
 
     public PhoneNumber(String value) {
         this.value = Objects.requireNonNull(value);
+        if(this.value.length() < 9){
+            throw new IllegalArgumentException("Phone number must have at least nine digits");
+        }
     }
 
     @Override
