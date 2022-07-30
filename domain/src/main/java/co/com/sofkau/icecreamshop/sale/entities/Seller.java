@@ -17,6 +17,7 @@ public class Seller extends Entity<SellerId> {
         this.phoneNumber = phoneNumber;
     }
 
+    //Commands
     public void updateName(Name name) {
         this.name = Objects.requireNonNull(name);
     }
