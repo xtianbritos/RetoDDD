@@ -6,11 +6,9 @@ import co.com.sofkau.icecreamshop.sale.values.SellerId;
 
 public class SellerNameUpdated extends DomainEvent {
     private final Name name;
-    private final SellerId sellerId;
 
-    public SellerNameUpdated(SellerId sellerId, Name name) {
+    public SellerNameUpdated(Name name) {
         super("sofka.sale.sellerupdated");
-        this.sellerId = sellerId;
         this.name = name;
     }
 
@@ -19,7 +17,4 @@ public class SellerNameUpdated extends DomainEvent {
         return name;
     }
 
-    public SellerId getSellerId() {
-        return sellerId;
-    }
 }
