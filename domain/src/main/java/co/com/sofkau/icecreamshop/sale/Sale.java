@@ -47,8 +47,8 @@ public class Sale extends AggregateEvent<SaleId>{
         appendChange(new ProductPriceUpdated(productId, price)).apply();
     }
 
-    public void addSeller(SellerId sellerId, Name name, PhoneNumber phoneNumber) {
-        Objects.requireNonNull(sellerId);
+    public void addSeller(Name name, PhoneNumber phoneNumber) {
+        SellerId sellerId = new SellerId();
         Objects.requireNonNull(name);
         Objects.requireNonNull(phoneNumber);
         appendChange(new SellerAdded(sellerId, name, phoneNumber)).apply();
