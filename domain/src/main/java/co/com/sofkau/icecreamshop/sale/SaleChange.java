@@ -17,7 +17,7 @@ public class SaleChange extends EventChange {
         });
 
         apply((ProductAdded event) -> {
-            sale.productSet.add(new Product(event.getProductId(), event.getName()));
+            sale.productSet.add(new Product(event.getProductId(), event.getName(), event.getPrice()));
         });
 
         apply((ProductRemoved event) -> {

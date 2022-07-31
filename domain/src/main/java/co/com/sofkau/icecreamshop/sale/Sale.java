@@ -2,7 +2,6 @@ package co.com.sofkau.icecreamshop.sale;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofkau.icecreamshop.sale.commands.UpdateProductPrice;
 import co.com.sofkau.icecreamshop.sale.entities.Product;
 import co.com.sofkau.icecreamshop.sale.entities.Seller;
 import co.com.sofkau.icecreamshop.sale.events.*;
@@ -28,17 +27,16 @@ public class Sale extends AggregateEvent<SaleId>{
         subscribe(new SaleChange(this));
     }
 
-    private static Sale from(SaleId saleId, List<DomainEvent> domainEvents) {
+    public static Sale from(SaleId saleId, List<DomainEvent> domainEvents) {
         Sale sale = new Sale(saleId);
         domainEvents.forEach(sale::applyEvent);
         return sale;
     }
 
     //Commands
-    public void addProduct(ProductId productId, Name name) {
-        Objects.requireNonNull(productId);
-        Objects.requireNonNull(name);
-        appendChange(new ProductAdded(productId, name)).apply();
+    public void addProduct(Name name, Price price) {
+        ProductId productId = new ProductId();
+        appendChange(new ProductAdded(productId, name, price)).apply();
     }
 
     public void removeProduct(ProductId productId) {

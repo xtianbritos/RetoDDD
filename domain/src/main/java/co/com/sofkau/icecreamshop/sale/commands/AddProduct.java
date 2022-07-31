@@ -3,22 +3,23 @@ package co.com.sofkau.icecreamshop.sale.commands;
 import co.com.sofka.domain.generic.Command;
 import co.com.sofkau.icecreamshop.sale.values.Name;
 import co.com.sofkau.icecreamshop.sale.values.Price;
-import co.com.sofkau.icecreamshop.sale.values.ProductId;
+import co.com.sofkau.icecreamshop.sale.values.SaleId;
 
 public class AddProduct extends Command {
-    private final ProductId productId;
+    private final SaleId saleId;
     private final Name name;
     private final Price price;
 
-    public AddProduct(ProductId productId, Name name, Price price) {
-        this.productId = productId;
+    public AddProduct(SaleId saleId, Name name, Price price) {
+        this.saleId = saleId;
         this.name = name;
         this.price = price;
     }
 
     //Getters
-    public ProductId getProductId() {
-        return productId;
+
+    public SaleId getSaleId() {
+        return saleId;
     }
 
     public Name getName() {

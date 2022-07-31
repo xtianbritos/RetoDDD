@@ -11,7 +11,7 @@ public class Product extends Entity<ProductId> {
     private Price price;
     private Name name;
 
-    public Product(ProductId productId, Name name) {
+    public Product(ProductId productId, Name name, Price price) {
         super(productId);
         this.name = name;
     }
