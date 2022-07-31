@@ -2,20 +2,20 @@ package co.com.sofkau.icecreamshop.sale.commands;
 
 import co.com.sofka.domain.generic.Command;
 import co.com.sofkau.icecreamshop.sale.values.PhoneNumber;
-import co.com.sofkau.icecreamshop.sale.values.SellerId;
+import co.com.sofkau.icecreamshop.sale.values.SaleId;
 
 public class UpdateSellerPhoneNumber extends Command {
-    private final SellerId sellerId;
+    private final SaleId saleId;
     private final PhoneNumber phoneNumber;
 
-    public UpdateSellerPhoneNumber(SellerId sellerId, PhoneNumber phoneNumber) {
-        this.sellerId = sellerId;
+    public UpdateSellerPhoneNumber(SaleId saleId, PhoneNumber phoneNumber) {
+        this.saleId = saleId;
         this.phoneNumber = phoneNumber;
     }
 
     //Getters
-    public SellerId getSellerId() {
-        return sellerId;
+    public SaleId getSaleId() {
+        return saleId;
     }
 
     public PhoneNumber getPhoneNumber() {
