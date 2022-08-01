@@ -14,7 +14,7 @@ public class AddDistributor extends Command {
         this.cost = cost;
     }
 
-    Getters
+    //Getters
 
     public DistributorId getDistributorId() {
         return distributorId;
