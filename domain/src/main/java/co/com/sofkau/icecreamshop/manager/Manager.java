@@ -25,7 +25,7 @@ public class Manager extends AggregateEvent<ManagerId> {
 
     private Manager(ManagerId managerId) {
         super(managerId);
-        subscribe(new SaleChange(this));
+        subscribe(new ManagerChange(this));
     }
 
     public static Manager from(ManagerId managerId, List<DomainEvent> domainEvents) {
@@ -57,14 +57,14 @@ public class Manager extends AggregateEvent<ManagerId> {
 
     //Getters
     public Optional<Employee> getEmployeeById(EmployeeId employeeId) {
-        return employeeSet()
+        return getEmployeeSet()
                 .stream()
                 .filter(product -> product.identity().equals(employeeId))
                 .findFirst();
     }
 
     public Optional<Distributor> getDistributorById(DistributorId distributorId) {
-        return distributorSet()
+        return getDistributorSet()
                 .stream()
                 .filter(product -> product.identity().equals(distributorId))
                 .findFirst();

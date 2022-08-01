@@ -8,7 +8,7 @@ import co.com.sofkau.icecreamshop.manager.events.*;
 import java.util.HashSet;
 
 public class ManagerChange extends EventChange {
-}
+
     public ManagerChange(Manager manager) {
 
         apply((ManagerCreated event) -> {
