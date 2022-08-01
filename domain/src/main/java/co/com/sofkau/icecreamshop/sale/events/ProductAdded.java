@@ -4,7 +4,6 @@ import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofkau.icecreamshop.sale.values.Name;
 import co.com.sofkau.icecreamshop.sale.values.Price;
 import co.com.sofkau.icecreamshop.sale.values.ProductId;
-import co.com.sofkau.icecreamshop.sale.values.SaleId;
 
 
 public class ProductAdded extends DomainEvent {

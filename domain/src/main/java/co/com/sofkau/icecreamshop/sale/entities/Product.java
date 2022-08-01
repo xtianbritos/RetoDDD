@@ -14,6 +14,7 @@ public class Product extends Entity<ProductId> {
     public Product(ProductId productId, Name name, Price price) {
         super(productId);
         this.name = name;
+        this.price = price;
     }
 
     //Commands
